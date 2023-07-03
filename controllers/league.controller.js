@@ -1,10 +1,10 @@
-const Player = require("../models/player.js");
+const League = require("../models/league.js");
 
 exports.findAll = (req, res) => {
     const name = req.params.name
     console.log(name)
 
-    Player.getAll(name, (err,data) =>{
+    League.getAll(name, (err,data) =>{
         if(err)
             res.status(500).send({
                 message:
@@ -14,7 +14,7 @@ exports.findAll = (req, res) => {
     });
 };
 
-exports.Save = (req, res) => {
+/*exports.Save = (req, res) => {
     
     const name = req.body.name
     const rating = req.body.rating
@@ -29,4 +29,4 @@ exports.Save = (req, res) => {
         else
             res.send(data)
     })
-}
+}*/
