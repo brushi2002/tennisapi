@@ -1,10 +1,10 @@
 const Player = require("../models/player.js");
 
 exports.findAll = (req, res) => {
-    const name = req.params.name
-    console.log(name)
+    const email = req.params.email
+    console.log(email)
 
-    Player.getAll(name, (err,data) =>{
+    Player.getAll(email, (err,data) =>{
         if(err)
             res.status(500).send({
                 message:

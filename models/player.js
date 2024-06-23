@@ -7,11 +7,11 @@ const Player = function(name, rating, email){
     this.email = email;
 }
 
-Player.getAll = (name, result) => {
+Player.getAll = (email, result) => {
     let query = "SELECT * FROM Player P";
 
-    if(name) {
-        query += ` WHERE Name LIKE '%${name}%'`;
+    if(email) {
+        query += ` WHERE Email = '${email}'`;
     }
 
     sql.query(query, (err, res) => {

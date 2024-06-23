@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 const Player = require('./controllers/player.controller.js');
 const League = require('./controllers/league.controller.js');
 
-const playerRouter = require('./routers/playerRouter')(Player)
+const playerRouter = require('./routers/playerRouter.js')(Player)
 const leagueRouter = require('./routers/leagueRouter.js')(League)
 
 app.use(bodyParser.urlencoded({extended : true}));
